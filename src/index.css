@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Fredoka', 'Quicksand', 'Outfit', sans-serif;
+  }
+}
+
+@keyframes floatLeaf {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) rotate(0deg) translate(0);
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(105vh) rotate(360deg) translate(50px);
+  }
+}
+
+@keyframes starPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-30deg);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.35) rotate(15deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes bounceSlow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes pulseWarning {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 #ef444466;
+  }
+  50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 10px #ef444400;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes celebrationConfetti {
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg) scale(0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(600px) rotate(720deg) scale(1);
+  }
+}
+
+.animate-star-pop {
+  animation: starPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-bounce-slow {
+  animation: bounceSlow 3s ease-in-out infinite;
+}
+
+.animate-pulse-warning {
+  animation: pulseWarning 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.jungle-card {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background: #fffffff2;
+  border: 4px solid #bbf7d0;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px #022c224d, 0 8px 10px -6px #022c2233;
+}
+
+.jungle-card-dark {
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  background: #064e3bd9;
+  border: 3px solid #4ade8066;
+  border-radius: 1.5rem;
+  box-shadow: 0 20px 25px -5px #00000080;
+}
+
+.btn-tactile {
+  transition: all 0.15s ease-in-out;
+  transform: translateY(0);
+}
+.btn-tactile:hover {
+  transform: translateY(-3px);
+}
+.btn-tactile:active {
+  transform: translateY(2px);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #064e3b;
+}
+::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #34d399;
+}
+
